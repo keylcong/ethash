@@ -7,10 +7,10 @@ license = "Apache-2.0"
 edition = "2018"
 
 [dependencies]
-ethereum-types = { version = "0.8", default-features = false }
-primitive-types = { version = "0.6", default-features = false, features = ["rlp"] }
-rlp = { version = "0.4", default-features = false }
-byteorder = { version = "1", default-features = false }
+primitive-types = { default-features = false, features = ["codec", "rlp"], git = "https://github.com/keylcong/parity-common.git" }
+ethereum-types  = { default-features = false, features = ["codec", "rlp"], git = "https://github.com/keylcong/parity-common.git" }
+rlp = { default-features = false, git = "https://github.com/keylcong/parity-common.git" }
+byteorder = { version = "1.3.4", default-features = false }
 sha3 = { version = "0.8", default-features = false }
 
 [dev-dependencies]
